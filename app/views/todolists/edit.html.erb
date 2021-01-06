@@ -1,0 +1,10 @@
+<h1>編集</h1>
+<%= form_with model: @list, url: todolist_path(@list.id), local: true do |f| %>
+  <h4>タイトル</h4>
+  <%= f.text_field :title %>
+  <h4>本文</h4>
+  <%= f.text_area :body  %>
+  <div>
+    <%= f.submit '投稿'  %>
+  </div>
+<% end %>
